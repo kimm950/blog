@@ -15,7 +15,9 @@ const CommentsForm = ({ slug }: Props) => {
   const storeDataEl = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
+    // @ts-ignore: Object is possibly 'null'.
     nameEl.current.value = window.localStorage.getItem('name');
+    // @ts-ignore: Object is possibly 'null'.
     emailEl.current.value = window.localStorage.getItem('email');
   }, []);
 

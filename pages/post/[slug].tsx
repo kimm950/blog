@@ -39,6 +39,7 @@ const PostDetails: NextPage<Post> = ({ post }) => {
   if (router.isFallback) {
     <Spinner />;
   }
+  if (!post) return undefined;
   return (
     <div className="container mx-auto px-10 mb-8">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
@@ -74,9 +75,9 @@ export async function getStaticProps({
 }
 
 export async function getStaticPaths() {
-  const posts = await getPosts();
+  const posts = (await getPosts()) || [];
   return {
-    paths: posts.map(({ node: { slug } }) => ({ params: { slug } })),
+    paths: posts.map(({ node: { slug } }: any) => ({ params: { slug } })),
     fallback: true,
   };
 }

@@ -36,7 +36,7 @@ const PostDetail = ({ post }: Post) => {
       case ContentType.HeadingThree:
         return (
           <h3 key={index} className="text-xl font-semibold mb-4">
-            {modifiedText.map((item, i) => (
+            {modifiedText.map((item: any, i: number) => (
               <Fragment key={i}>{item}</Fragment>
             ))}
           </h3>
@@ -44,7 +44,7 @@ const PostDetail = ({ post }: Post) => {
       case ContentType.Paragraph:
         return (
           <p key={index} className="mb-8">
-            {modifiedText.map((item, i) => (
+            {modifiedText.map((item: any, i: number) => (
               <Fragment key={i}>{item}</Fragment>
             ))}
           </p>
@@ -52,7 +52,7 @@ const PostDetail = ({ post }: Post) => {
       case ContentType.HeadingFour:
         return (
           <h4 key={index} className="text-md font-semibold mb-4">
-            {modifiedText.map((item, i) => (
+            {modifiedText.map((item: any, i: number) => (
               <Fragment key={i}>{item}</Fragment>
             ))}
           </h4>
@@ -71,7 +71,7 @@ const PostDetail = ({ post }: Post) => {
         return modifiedText;
     }
   };
-
+  if (!post) return undefined;
   return (
     <div className="bg-white shodow-lg rounded-lg lg:p-8 pb-12 mb-8">
       <div className="relative overflow-hidden shadow-mb mb-6">
@@ -116,8 +116,8 @@ const PostDetail = ({ post }: Post) => {
           </div>
         </div>
         <h1 className="mb-8 text-3xl font-semibold">{post.title}</h1>
-        {post.content.raw.children.map((obj, idx) => {
-          const children = obj.children.map((item, itemIdx) => {
+        {post.content.raw.children.map((obj: any, idx: number) => {
+          const children = obj.children.map((item: any, itemIdx: number) => {
             return getContentFragment(itemIdx, item.text, item);
           });
           return getContentFragment(idx, children, obj, obj.type);
