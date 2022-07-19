@@ -27,7 +27,7 @@ const Header = (props: Props) => {
           {categories.map((category) => {
             return (
               <Link key={category.name} href={`/category/${category.slug}`}>
-                <span className="md:float-right mt-2 align-middle text-black ml-4">
+                <span className="cursor-pointer md:float-right mt-2 align-middle text-black ml-4">
                   {category.name}
                 </span>
               </Link>
