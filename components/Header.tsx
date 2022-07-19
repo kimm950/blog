@@ -4,9 +4,7 @@ import Link from 'next/link';
 import { getCategories } from '../services';
 import { Category } from '../pages';
 
-type Props = {};
-
-const Header = (props: Props) => {
+const Header = (): JSX.Element => {
   const [categories, setCategories] = useState<Category[]>([]);
 
   useEffect(() => {
