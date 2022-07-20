@@ -2,40 +2,7 @@ import type { NextPage, GetStaticPropsResult } from 'next';
 import Head from 'next/head';
 import { PostCard, Categories, PostWidget } from 'components';
 import { getPosts } from 'services';
-
-export type Photo = {
-  url: string;
-};
-
-export type Author = {
-  bio: string;
-  id: string;
-  name: string;
-  photo: Photo;
-};
-
-export type Category = {
-  name: string;
-  slug: string;
-};
-
-export type FeaturedImage = {
-  url: string;
-};
-
-export type Node = {
-  author: Author;
-  categories: Category[];
-  createdAt: string | Date;
-  excerpt: string;
-  featuredImage: FeaturedImage;
-  slug: string;
-  title: string;
-};
-
-export type PostNode = {
-  node: Node;
-};
+import { PostNode } from 'types';
 
 type Props = {
   posts: PostNode[];

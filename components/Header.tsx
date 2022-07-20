@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 
 import { getCategories } from 'services';
-import { Category } from 'pages';
+import { Category } from 'types';
 
 const Header = (): JSX.Element => {
   const [categories, setCategories] = useState<Category[]>([]);

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import dayjs from 'dayjs';
 import Link from 'next/link';
 import { getRecentPosts, getSimilarPosts } from 'services';
-import { Node } from 'pages';
+import { Node } from 'types';
 
 type Props = {
   categories?: string[] | undefined;

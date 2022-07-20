@@ -12,7 +12,7 @@ import {
   Spinner,
 } from 'components';
 
-import { Author as AuthorType, Category, FeaturedImage } from '../index';
+import { Author as AuthorType, Category, FeaturedImage } from 'types';
 
 type Content = {
   raw: any;
