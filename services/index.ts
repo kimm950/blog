@@ -1,6 +1,6 @@
 import { request, gql } from 'graphql-request';
 
-type Comment = {
+type CommentObj = {
   name: string;
   email: string;
   comment: string;
@@ -195,7 +195,7 @@ export const getComments = async (slug: string) => {
   return res.comments;
 };
 
-export const submitComment = async (commentObj: Comment) => {
+export const submitComment = async (commentObj: CommentObj) => {
   const res = await fetch('/api/comment', {
     method: 'POST',
     headers: {

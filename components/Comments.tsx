@@ -14,7 +14,7 @@ type Comment = {
   comment: string;
 };
 
-const Comments = ({ slug }: Props) => {
+const Comments = ({ slug }: Props): JSX.Element => {
   useEffect(() => {
     getComments(slug).then((res) => setComments(res));
   }, []);

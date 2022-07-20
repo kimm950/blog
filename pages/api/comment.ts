@@ -2,8 +2,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { GraphQLClient, gql } from 'graphql-request';
 
-const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT || '';
-const graphcmsToken = process.env.GRAPHCMS_TOKEN;
+const graphqlAPI: string = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT || '';
+const graphcmsToken: string = process.env.GRAPHCMS_TOKEN;
+
 export default async function comment(
   req: NextApiRequest,
   res: NextApiResponse<any>
@@ -34,12 +35,7 @@ export default async function comment(
     }
   `;
   try {
-    const result = await graphQLClient.request(query, {
-      name: req.body.name,
-      email: req.body.email,
-      comment: req.body.comment,
-      slug: req.body.slug,
-    });
+    const result = await graphQLClient.request(query, req.body);
 
     return res.status(200).send(result);
   } catch (error) {

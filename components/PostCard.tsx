@@ -1,12 +1,12 @@
 import React from 'react';
-import dayjs, { Dayjs } from 'dayjs';
+import dayjs from 'dayjs';
 import Link from 'next/link';
 import { Node } from 'types';
 
 interface Props {
   post: Node;
 }
-const PostCard = ({ post }: Props) => {
+const PostCard = ({ post }: Props): JSX.Element => {
   if (!post) return undefined;
   return (
     <div className="bg-white shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8">
@@ -59,9 +59,12 @@ const PostCard = ({ post }: Props) => {
       </p>
       <div className="text-center">
         <Link href={`/post/${post.slug}`}>
-          <span className="transition duration-500 transform hover:-translate-y-1 inline-block bg-black test-lg font-medium rounded-full text-white px-8 py-3 cursor-pointer">
+          <button
+            type="button"
+            className="transition duration-500 transform hover:-translate-y-1 inline-block bg-black test-lg font-medium rounded-full text-white px-8 py-3 cursor-pointer"
+          >
             Continue reading
-          </span>
+          </button>
         </Link>
       </div>
     </div>

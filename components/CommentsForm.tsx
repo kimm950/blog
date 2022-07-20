@@ -5,9 +5,8 @@ type Props = {
   slug: string;
 };
 
-const CommentsForm = ({ slug }: Props) => {
+const CommentsForm = ({ slug }: Props): JSX.Element => {
   const [error, setError] = useState<boolean>(false);
-  const [localStorage, setLocalStorage] = useState<any>(null);
   const [showSuccessMessage, setShowSuccessMessage] = useState<boolean>(false);
   const commentEl = useRef<HTMLTextAreaElement>(null);
   const nameEl = useRef<HTMLInputElement>(null);
@@ -21,7 +20,7 @@ const CommentsForm = ({ slug }: Props) => {
     emailEl.current.value = window.localStorage.getItem('email');
   }, []);
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     setError(false);
 
     const { value: comment } = commentEl.current || {};
@@ -49,18 +48,19 @@ const CommentsForm = ({ slug }: Props) => {
       window.localStorage.removeItem('email');
     }
 
-    submitComment(commentObj as any).then((res) => {
+    const { createComment } = await submitComment(commentObj as any);
+    if (createComment) {
       setShowSuccessMessage(true);
       setTimeout(() => {
         setShowSuccessMessage(false);
-      }, 3000);
-    });
+      }, 4000);
+    }
   };
 
   return (
     <div className="bg-white shadow-lg rounded-lg p-8 pb-12 mb-8">
       <h3 className="text-xl mb-8 font-semibold border-b pb-4">
-        Leave a Reply
+        Leave a Comment
       </h3>
       <div className="grid grid-cols-1 gap-4 mb-4">
         <textarea
@@ -108,7 +108,8 @@ const CommentsForm = ({ slug }: Props) => {
         <button
           type="button"
           onClick={handleSubmit}
-          className="transition duration-500 ease hover:bg-indigo-900 inline-block bg-pink-600 text-lg font-medium rounded-full text-white px-8 py-3 cursor-pointer"
+          disabled={showSuccessMessage}
+          className="transition duration-500 ease hover:bg-green-700 inline-block bg-gray-900 text-lg font-medium rounded-full text-white px-8 py-3 cursor-pointer"
         >
           Post Comment
         </button>
