@@ -18,18 +18,7 @@ module.exports = {
     'prettier',
     'prettier/react',
   ],
-  ignorePatterns: [
-    'tests/',
-    'DevTools/',
-    'registerServiceWorker.js',
-    'rollbar.umd.min.js',
-    '*.spec.*',
-    '*.test.*',
-    '/app/assets/javascripts/',
-    '/app/javascript/src/assets/styles/',
-    '/app/javascript/src/i18n/lang',
-    '/app/javascript/src/i18n/compiled_lang',
-  ],
+  ignorePatterns: [],
   rules: {
     'formatjs/no-offset': 'error',
     'no-plusplus': 'off',
@@ -76,11 +65,7 @@ module.exports = {
         config: {
           resolve: {
             extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
-            alias: {
-              '@src': path.resolve('app/javascript/src'),
-              '@tests': path.resolve('app/javascript/tests'),
-              'zeals-protobuf': path.resolve('vendor/node/zeals/protobuf'),
-            },
+            alias: {},
           },
         },
       },
