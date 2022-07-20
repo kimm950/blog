@@ -1,7 +1,7 @@
 import React from 'react';
 import type { NextPage, GetStaticPropsResult } from 'next';
 import { useRouter } from 'next/router';
-import { getPosts, getPostDetails } from '../../services';
+import { getPosts, getPostDetails } from 'services';
 import {
   PostDetail,
   Categories,
@@ -10,7 +10,7 @@ import {
   CommentsForm,
   Comments,
   Spinner,
-} from '../../components';
+} from 'components';
 
 import { Author as AuthorType, Category, FeaturedImage } from '../index';
 

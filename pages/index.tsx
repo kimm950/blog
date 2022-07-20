@@ -1,7 +1,7 @@
 import type { NextPage, GetStaticPropsResult } from 'next';
 import Head from 'next/head';
-import { PostCard, Categories, PostWidget } from '../components';
-import { getPosts } from '../services';
+import { PostCard, Categories, PostWidget } from 'components';
+import { getPosts } from 'services';
 
 export type Photo = {
   url: string;

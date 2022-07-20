@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { submitComment } from '../services/index';
+import { submitComment } from 'services/index';
 
 type Props = {
   slug: string;

@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import dayjs from 'dayjs';
 import Link from 'next/link';
-import { Category } from '../pages';
-import { getRecentPosts, getSimilarPosts } from '../services';
-import { Node } from '../pages';
+import { getRecentPosts, getSimilarPosts } from 'services';
+import { Node } from 'pages';
 
 type Props = {
   categories?: string[] | undefined;

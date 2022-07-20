@@ -2,8 +2,8 @@ import React from 'react';
 import type { GetStaticPropsResult } from 'next';
 import { useRouter } from 'next/router';
 import { PostNode } from '../index';
-import { PostCard, Categories, Spinner } from '../../components';
-import { getCategories, getCategoryPost } from '../../services/index';
+import { PostCard, Categories, Spinner } from 'components';
+import { getCategories, getCategoryPost } from 'services/index';
 import path from 'path';
 
 type Props = {

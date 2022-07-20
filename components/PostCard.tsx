@@ -1,7 +1,7 @@
 import React from 'react';
 import dayjs, { Dayjs } from 'dayjs';
 import Link from 'next/link';
-import { Node } from '../pages/index';
+import { Node } from 'pages/index';
 
 interface Props {
   post: Node;

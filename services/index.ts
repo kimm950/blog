@@ -1,5 +1,5 @@
 import { request, gql } from 'graphql-request';
-import { Category } from '../pages';
+import { Category } from 'pages';
 
 type Comment = {
   name: string;

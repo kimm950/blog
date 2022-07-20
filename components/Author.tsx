@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { Author as AuthorType } from './../pages';
+import { Author as AuthorType } from 'pages';
 
 type AuthorProps = {
   author: AuthorType;

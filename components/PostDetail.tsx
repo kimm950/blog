@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import dayjs from 'dayjs';
-import { Post } from './../pages/post/[slug]';
+import { Post } from 'pages/post/[slug]';
 
 export enum ContentType {
   HeadingThree = 'heading-three',
@@ -10,7 +10,7 @@ export enum ContentType {
 }
 
 const PostDetail = ({ post }: Post) => {
-  const getContentFragment = (
+  const renderContent = (
     index: number,
     text: string,
     obj: any,
@@ -118,9 +118,9 @@ const PostDetail = ({ post }: Post) => {
         <h1 className="mb-8 text-3xl font-semibold">{post.title}</h1>
         {post.content.raw.children.map((obj: any, idx: number) => {
           const children = obj.children.map((item: any, itemIdx: number) => {
-            return getContentFragment(itemIdx, item.text, item);
+            return renderContent(itemIdx, item.text, item);
           });
-          return getContentFragment(idx, children, obj, obj.type);
+          return renderContent(idx, children, obj, obj.type);
         })}
       </div>
     </div>

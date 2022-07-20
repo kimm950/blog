@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import dayjs from 'dayjs';
 import parse from 'html-react-parser';
-import { getComments } from '../services/index';
+import { getComments } from 'services/index';
 
 type Props = {
   slug: string;

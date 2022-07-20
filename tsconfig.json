@@ -18,6 +18,24 @@
     "allowSyntheticDefaultImports": true,
     "noImplicitAny": false,
     "noImplicitThis": true,
+    "baseUrl": ".",
+    "paths": {
+      "@pages/*": [
+        "./pages/*"
+      ],
+      "@public/*": [
+        "./public/*"
+      ],
+      "@components/*": [
+        "./components/*"
+      ],
+      "@services/*": [
+        "./services/*"
+      ],
+      "*": [
+        "*"
+      ]
+    },
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
