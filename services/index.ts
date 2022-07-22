@@ -219,6 +219,7 @@ export async function getPhotos() {
             }
             createdAt
             title
+            description
           }
         }
       }

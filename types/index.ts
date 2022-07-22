@@ -42,5 +42,6 @@ export type GalleryNode = {
     createdAt: string;
     photo: GalleryPhoto;
     title: string;
+    description: string;
   };
 };

@@ -26,13 +26,17 @@ function PostWidget({ categories, slug }: Props) {
       {relatedPosts?.map((post) => {
         return (
           <div key={post.title} className="flex items-center w-full">
-            <div className="w-16 flex-none">
+            <div className="w-16 flex-none pb-1">
               <img
-                className="align-middle rounded-full"
+                className="align-middle rounded-full object-cover"
                 src={post.featuredImage.url}
                 alt={post.title}
                 height="60px"
                 width="60px"
+                style={{
+                  maxHeight: '60px',
+                  minHeight: '60px',
+                }}
               />
             </div>
             <div className="flex-grow ml-4">

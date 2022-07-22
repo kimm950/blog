@@ -8,7 +8,7 @@ type Props = {
 
 const PhotoCard = ({ photo }: Props): JSX.Element => {
   const {
-    node: { title, createdAt, photo: galleryPhoto },
+    node: { title, createdAt, photo: galleryPhoto, description },
   } = photo;
 
   return (
@@ -16,6 +16,7 @@ const PhotoCard = ({ photo }: Props): JSX.Element => {
       <h1 className="mb-8 text-3xl font-semibold">{title}</h1>
       <img src={galleryPhoto.url} alt={title} width="50%" height="50%" />
       <span>{dayjs(createdAt).format('MMM DD YYYY')}</span>
+      <span>{description}</span>
     </div>
   );
 };
