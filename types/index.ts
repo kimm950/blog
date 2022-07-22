@@ -31,3 +31,16 @@ export type Node = {
 export type PostNode = {
   node: Node;
 };
+
+export type GalleryPhoto = {
+  id: string;
+  url: string;
+};
+
+export type GalleryNode = {
+  node: {
+    createdAt: string;
+    photo: GalleryPhoto;
+    title: string;
+  };
+};

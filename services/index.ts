@@ -206,3 +206,25 @@ export const submitComment = async (commentObj: CommentObj) => {
 
   return res.json();
 };
+
+export async function getPhotos() {
+  const query = gql`
+    query GetPhotos {
+      galleriesConnection {
+        edges {
+          node {
+            photo {
+              id
+              url
+            }
+            createdAt
+            title
+          }
+        }
+      }
+    }
+  `;
+
+  const photos = await request(graphqlAPI, query);
+  return photos.galleriesConnection.edges;
+}
