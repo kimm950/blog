@@ -16,7 +16,7 @@ const PhotoCard = ({ photo }: Props): JSX.Element => {
   return (
     <div
       key={title}
-      className="align-middle mb-8 shadow-md p-8 rounded-lg flex flex-col justify-between column"
+      className="align-middle mb-8 shadow-md p-5 rounded-lg flex flex-col justify-between column"
       onClick={() => setIsModalOpen(!isModalOpen)}
     >
       <img className="pb-4" src={galleryPhoto.url} alt={title} />
@@ -33,7 +33,7 @@ const PhotoCard = ({ photo }: Props): JSX.Element => {
               height="100%"
             />
             <div>
-              <div className="flex font-medium text-gray-700">
+              <div className="flex font-medium text-gray-700 mb-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-6 w-6 inline mr-2 text-pink-500"
