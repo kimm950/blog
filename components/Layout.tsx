@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { Header } from './';
+import { Header, Footer } from './';
 type Props = {
   children: ReactNode | ReactNode[];
 };
@@ -9,6 +9,7 @@ const Layout = ({ children }: Props): JSX.Element => {
     <div>
       <Header />
       {children}
+      <Footer />
     </div>
   );
 };
