@@ -6,8 +6,13 @@ import { Category } from 'types';
 const Categories = (): JSX.Element => {
   const [categories, setCategories] = useState<Category[]>([]);
 
+  async function fetchCategoies() {
+    const res = await getCategories();
+    setCategories(res);
+  }
+
   useEffect(() => {
-    getCategories().then((res) => setCategories(res));
+    fetchCategoies();
   }, []);
 
   return (
@@ -22,6 +27,9 @@ const Categories = (): JSX.Element => {
           </Link>
         );
       })}
+      <Link href="/gallery">
+        <span className="cursor-pointer block pb-3 mmb-3">Gallery</span>
+      </Link>
     </div>
   );
 };
