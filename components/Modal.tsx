@@ -4,7 +4,6 @@ export type ModalProps = {
   onClose: () => void;
   children: React.ReactElement | React.ReactNode[];
   title?: React.ReactNode;
-  disabled?: boolean;
 };
 
 const Modal = ({ onClose, title, children }: ModalProps): JSX.Element => {

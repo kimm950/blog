@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
-import gitHubIcon from 'public/github.svg';
 
 import { getCategories } from 'services';
 import { Category } from 'types';
@@ -40,15 +38,6 @@ const Header = (): JSX.Element => {
           </Link>
         </div>
       </div>
-      <Link href="https://github.com/kimm950">
-        <Image
-          src={gitHubIcon}
-          alt="ny github"
-          width="20px"
-          height="20px"
-          className="cursor-pointer transition duration-500 transform hover:-translate-y-1 "
-        />
-      </Link>
     </div>
   );
 };

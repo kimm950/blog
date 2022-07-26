@@ -31,6 +31,7 @@ const Home: NextPage<Props> = ({ posts }) => {
     </div>
   );
 };
+
 export default Home;
 
 export async function getStaticProps(): Promise<
