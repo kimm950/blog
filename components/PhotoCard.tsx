@@ -21,7 +21,7 @@ const PhotoCard = ({ photo }: Props): JSX.Element => {
     >
       <img className="pb-4" src={galleryPhoto.url} alt={title} />
       <div>
-        <p>{title}</p>
+        <p className="capitalize">{title}</p>
       </div>
       {isModalOpen && (
         <Modal onClose={() => setIsModalOpen(!isModalOpen)} title={title}>
