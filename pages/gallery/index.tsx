@@ -1,5 +1,5 @@
 import React from 'react';
-import { PhotoCard } from 'components';
+import { PhotoCard, Categories } from 'components';
 import { getPhotos } from 'services';
 import { GetStaticPropsResult } from 'next';
 import { GalleryNode } from 'types';
@@ -15,6 +15,7 @@ export default function Gallery({ photos }: GalleryProps) {
       {photos?.map((photo) => {
         return <PhotoCard photo={photo} />;
       })}
+      <Categories />
     </div>
   );
 }
