@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { submitComment } from 'services/index';
+import { Spinner } from 'components';
 
 type Props = {
   slug: string;
@@ -8,6 +9,7 @@ type Props = {
 const CommentsForm = ({ slug }: Props): JSX.Element => {
   const [error, setError] = useState<boolean>(false);
   const [showSuccessMessage, setShowSuccessMessage] = useState<boolean>(false);
+  const [loading, setLodaing] = useState<boolean>(false);
   const commentEl = useRef<HTMLTextAreaElement>(null);
   const nameEl = useRef<HTMLInputElement>(null);
   const emailEl = useRef<HTMLInputElement>(null);
@@ -39,7 +41,7 @@ const CommentsForm = ({ slug }: Props): JSX.Element => {
       comment,
       slug,
     };
-
+    setLodaing(true);
     if (storeData) {
       window.localStorage.setItem('name', name);
       window.localStorage.setItem('email', email);
@@ -49,6 +51,7 @@ const CommentsForm = ({ slug }: Props): JSX.Element => {
     }
 
     const { createComment } = await submitComment(commentObj as any);
+    setLodaing(false);
     if (createComment) {
       setShowSuccessMessage(true);
       setTimeout(() => {
@@ -108,16 +111,14 @@ const CommentsForm = ({ slug }: Props): JSX.Element => {
         <button
           type="button"
           onClick={handleSubmit}
-          disabled={showSuccessMessage}
           className="transition duration-500 ease hover:bg-green-700 inline-block bg-gray-900 text-lg font-medium rounded-full text-white px-8 py-3 cursor-pointer"
         >
           Post Comment
         </button>
-        {showSuccessMessage && (
-          <span className="text-xl float-right font-semibold mt-3 text-green-500">
-            Comment submitted for review!
-          </span>
-        )}
+        <span className="text-l float-right font-semibold mt-3 text-green-500">
+          {showSuccessMessage && 'Comment submitted for review!'}
+          {loading && <Spinner />}
+        </span>
       </div>
     </div>
   );
