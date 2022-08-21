@@ -7,6 +7,7 @@ export enum ContentType {
   HeadingFour = 'heading-four',
   Paragraph = 'paragraph',
   Image = 'image',
+  CodeBlock = 'code-block',
 }
 
 const PostDetail = ({ post }: Post) => {
@@ -17,6 +18,7 @@ const PostDetail = ({ post }: Post) => {
     type?: string
   ) => {
     let modifiedText: any = text;
+    console.log(obj);
 
     if (obj) {
       if (obj.bold) {
@@ -73,6 +75,16 @@ const PostDetail = ({ post }: Post) => {
             width={obj.width}
             src={obj.src}
           />
+        );
+      case ContentType.CodeBlock:
+        return (
+          <pre className="bg-gray-200 p-2 rounded" key={index}>
+            <code>
+              {modifiedText.map((item: any, i) => (
+                <Fragment key={i}>{text}</Fragment>
+              ))}
+            </code>
+          </pre>
         );
       default:
         return modifiedText;
