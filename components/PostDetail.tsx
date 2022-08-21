@@ -30,6 +30,13 @@ const PostDetail = ({ post }: Post) => {
       if (obj.underline) {
         modifiedText = <u key={index}>{text}</u>;
       }
+      if (obj.code) {
+        modifiedText = (
+          <code className="bg-gray-200 rounded" key={index}>
+            {text}
+          </code>
+        );
+      }
     }
 
     switch (type) {
