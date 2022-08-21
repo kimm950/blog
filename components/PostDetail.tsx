@@ -8,6 +8,7 @@ export enum ContentType {
   Paragraph = 'paragraph',
   Image = 'image',
   CodeBlock = 'code-block',
+  Link = 'link',
 }
 
 const PostDetail = ({ post }: Post) => {
@@ -18,7 +19,6 @@ const PostDetail = ({ post }: Post) => {
     type?: string
   ) => {
     let modifiedText: any = text;
-    console.log(obj);
 
     if (obj) {
       if (obj.bold) {
@@ -37,6 +37,13 @@ const PostDetail = ({ post }: Post) => {
           <code className="bg-gray-200 rounded" key={index}>
             {text}
           </code>
+        );
+      }
+      if (obj.href) {
+        modifiedText = (
+          <a className="text-blue-500 underline" href={obj.href} key={index}>
+            {obj.children.map(({ text }) => text)}
+          </a>
         );
       }
     }
