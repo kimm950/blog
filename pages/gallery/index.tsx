@@ -27,5 +27,6 @@ export async function getStaticProps(): Promise<
 
   return {
     props: { photos },
+    revalidate: 10,
   };
 }
