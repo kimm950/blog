@@ -12,11 +12,11 @@ const PhotoCard = ({ photo }: Props): JSX.Element => {
   const {
     node: { title, createdAt, photo: galleryPhoto, description },
   } = photo;
+
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
   return (
     <div
-      key={title}
       className="align-middle mb-8 shadow-md p-5 rounded-lg flex flex-col justify-between column"
       onClick={() => setIsModalOpen(!isModalOpen)}
     >

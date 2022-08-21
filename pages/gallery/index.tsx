@@ -13,7 +13,7 @@ export default function Gallery({ photos }: GalleryProps) {
   return (
     <div className="container mx-auto px-10 mb-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
       {photos?.map((photo) => {
-        return <PhotoCard photo={photo} />;
+        return <PhotoCard photo={photo} key={photo.node.photo.id} />;
       })}
       <Categories />
     </div>
