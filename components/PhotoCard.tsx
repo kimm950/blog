@@ -17,7 +17,7 @@ const PhotoCard = ({ photo }: Props): JSX.Element => {
 
   return (
     <div
-      className="align-middle mb-8 shadow-md p-5 rounded-lg flex flex-col justify-between column"
+      className="align-middle mb-8 shadow-md p-5 rounded-lg flex flex-col justify-between column cursor-pointer"
       onClick={() => setIsModalOpen(!isModalOpen)}
     >
       <img className="pb-4" src={galleryPhoto.url} alt={title} />
