@@ -1,6 +1,6 @@
 import type { NextPage, GetStaticPropsResult } from 'next';
 import Head from 'next/head';
-import { PostCard, Categories, PostWidget } from 'components';
+import { PostCard, Categories, PostWidget, ScrollToTop } from 'components';
 import { getPosts } from 'services';
 import { PostNode } from 'types';
 
@@ -17,6 +17,7 @@ const Home: NextPage<Props> = ({ posts }) => {
       </Head>
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
         <div className="lg:col-span-8 col-span-1">
+          <ScrollToTop />
           {posts.map((post, index) => {
             return <PostCard post={post.node} key={post.node.title} />;
           })}

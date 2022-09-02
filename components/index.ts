@@ -13,3 +13,4 @@ export { default as Spinner } from './Spinner';
 export { default as PhotoCard } from './PhotoCard';
 export { default as Modal } from './Modal';
 export { default as Footer } from './Footer';
+export { default as ScrollToTop } from './ScrollToTop' 
