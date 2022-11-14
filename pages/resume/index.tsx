@@ -5,7 +5,7 @@ type ResumeProps = {
   // TODO: IMPLEMENT FUNCTIONALITY TO MAKE data.ts ADJUSTABLE FROM THE HEADLESS CMS
 };
 
-export default function Resume({}: ResumeProps) {
+export default function Resume({}: ResumeProps): JSX.Element {
   return (
     <main className="container mx-auto px-10 mb-8">
       <header className="">

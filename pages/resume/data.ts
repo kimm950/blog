@@ -40,7 +40,7 @@ export const workExperiences: WorkExperience[] = [
       {
         time: '5. 2019 – 10. 2021',
         position: 'Frontend Engineer',
-        description: `Frontend web-application development. Main project developer by using NExt `,
+        description: `Frontend web-application development. Main project developer who is in charge of frontend developement, releases, bug fixs and refactoring`,
       },
       {
         time: '3. 2019 – 5. 2019',
