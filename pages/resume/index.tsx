@@ -1,5 +1,5 @@
 import React from 'react';
-import { workExperiences, skillSet, educations, languages } from './data';
+import { workExperiences, skillSet, educations, languages } from 'lib/data';
 
 type ResumeProps = {
   // TODO: IMPLEMENT FUNCTIONALITY TO MAKE data.ts ADJUSTABLE FROM THE HEADLESS CMS
