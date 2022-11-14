@@ -36,6 +36,11 @@ const Header = (): JSX.Element => {
               Gallery
             </span>
           </Link>
+          <Link href="/resume">
+            <span className="cursor-pointer md:float-right mt-2 align-middle text-black ml-4">
+              About
+            </span>
+          </Link>
         </div>
       </div>
     </div>

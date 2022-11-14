@@ -63,15 +63,15 @@ export const workExperiences: WorkExperience[] = [
 type TechStack = string;
 
 type SkillSet = {
-  area: string;
+  category: string;
   techStacks: TechStack[];
 };
 
 export const skillSet: SkillSet[] = [
   {
-    area: 'JS Frameworks / Libraries',
+    category: 'JS Frameworks / Libraries',
     techStacks: [
-      'Javascript',
+      'JavaScript',
       'TypeScript',
       'Reactjs',
       'Nextjs',
@@ -80,18 +80,26 @@ export const skillSet: SkillSet[] = [
       'Micro Frontend',
       'Storybook',
       'Componenet Library',
+      'Sentry',
     ],
   },
   {
-    area: 'API',
+    category: 'API',
     techStacks: ['Nodejs', 'Firebase', 'gRPC', 'REST API'],
   },
   {
-    area: 'Testing',
-    techStacks: ['Jest', 'enzyme', 'React Testing Library'],
+    category: 'Testing',
+    techStacks: ['Jest', 'Enzyme', 'React Testing Library'],
   },
 
-  { area: 'CI CD', techStacks: ['Circle CI', 'Git-flow'] },
+  {
+    category: 'CI / CD',
+    techStacks: ['Circle CI', 'Git-flow', 'GitHub Action'],
+  },
+  {
+    category: 'Management',
+    techStacks: ['Jira / Confluence', 'Technical interview', 'Evaluation'],
+  },
 ];
 
 export const languages: string[] = ['English', 'Japanese', 'Korean'];

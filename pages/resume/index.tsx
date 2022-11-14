@@ -8,9 +8,24 @@ type ResumeProps = {
 export default function Resume({}: ResumeProps) {
   return (
     <main className="container mx-auto px-10 mb-8">
-      <header>
-        <h1 className="font-bold text-4xl">Hyun Sung Kim</h1>
+      <header className="">
+        <h1 className="font-bold text-4xl text-white p-2 bg-red-600 w-fit">
+          Hyun Sung Kim
+        </h1>
       </header>
+
+      <section className="education mb-5 mt-10">
+        <h2 className="font-bold text-xl uppercase">Education</h2>
+        {educations.map((school) => {
+          return (
+            <>
+              <h3 className="font-bold text-lg">{school.name}</h3>
+              <time className="font-bold text-gray-500">{school.time}</time>
+              <p>{school.degree}</p>
+            </>
+          );
+        })}
+      </section>
 
       <section className="work-experience my-5">
         <h2 className="font-bold text-xl uppercase">Work experiences</h2>
@@ -36,11 +51,11 @@ export default function Resume({}: ResumeProps) {
 
       <section className="skill my-5">
         <h2 className="font-bold text-xl uppercase">Skills</h2>
-        <div className="flex justify-between">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-2">
           {skillSet.map((skill) => {
             return (
               <div>
-                <h3 className="font-bold text-lg">{skill.area}</h3>
+                <h3 className="font-bold text-lg">{skill.category}</h3>
                 <ul>
                   {skill.techStacks.map((techStack) => {
                     return <li>{techStack}</li>;
@@ -50,19 +65,6 @@ export default function Resume({}: ResumeProps) {
             );
           })}
         </div>
-      </section>
-
-      <section className="education my-5">
-        <h2 className="font-bold text-xl uppercase">Education</h2>
-        {educations.map((school) => {
-          return (
-            <>
-              <h3 className="font-bold text-lg">{school.name}</h3>
-              <time className="font-bold text-gray-500">{school.time}</time>
-              <p>{school.degree}</p>
-            </>
-          );
-        })}
       </section>
 
       <section className="language my-5">

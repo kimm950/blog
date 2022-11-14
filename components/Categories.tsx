@@ -30,6 +30,9 @@ const Categories = (): JSX.Element => {
       <Link href="/gallery">
         <span className="cursor-pointer block pb-3 mmb-3">Gallery</span>
       </Link>
+      <Link href="/resume">
+        <span className="cursor-pointer block pb-3 mmb-3">About</span>
+      </Link>
     </div>
   );
 };
