@@ -40,7 +40,7 @@ export const workExperiences: WorkExperience[] = [
       {
         time: '5. 2019 – 10. 2021',
         position: 'Frontend Engineer',
-        description: `Frontend web-application development`,
+        description: `Frontend web-application development. Main project developer by using NExt `,
       },
       {
         time: '3. 2019 – 5. 2019',
@@ -79,8 +79,10 @@ export const skillSet: SkillSet[] = [
       'MUI',
       'Micro Frontend',
       'Storybook',
-      'Componenet Library',
+      'Component Library',
       'Sentry',
+      'Tailwind CSS',
+      'Styled Component',
     ],
   },
   {

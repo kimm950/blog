@@ -20,7 +20,9 @@ export default function Resume({}: ResumeProps) {
           return (
             <>
               <h3 className="font-bold text-lg">{school.name}</h3>
-              <time className="font-bold text-gray-500">{school.time}</time>
+              <time className="font-bold text-gray-500 text-sm">
+                {school.time}
+              </time>
               <p>{school.degree}</p>
             </>
           );
@@ -37,7 +39,7 @@ export default function Resume({}: ResumeProps) {
                 return (
                   <div className="mb-2">
                     <p className="font-bold text-red-600 ">{detail.position}</p>
-                    <time className="font-bold text-gray-500">
+                    <time className="font-bold text-gray-500 text-sm">
                       {detail.time}
                     </time>
                     <p>{detail.description}</p>
