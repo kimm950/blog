@@ -69,7 +69,7 @@ type SkillSet = {
 
 export const skillSet: SkillSet[] = [
   {
-    category: 'JS Frameworks / Libraries',
+    category: 'Frameworks / Libraries',
     techStacks: [
       'JavaScript',
       'TypeScript',
@@ -78,9 +78,15 @@ export const skillSet: SkillSet[] = [
       'Solidjs',
       'MUI',
       'Micro Frontend',
+      'Sentry',
+    ],
+  },
+  {
+    category: 'UI UX',
+    techStacks: [
       'Storybook',
       'Component Library',
-      'Sentry',
+      'Hotjar',
       'Tailwind CSS',
       'Styled Component',
     ],

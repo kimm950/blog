@@ -1,5 +1,10 @@
 import React from 'react';
-import { workExperiences, skillSet, educations, languages } from 'lib/data';
+import {
+  workExperiences,
+  skillSet,
+  educations,
+  languages,
+} from 'lib/resumeData';
 
 type ResumeProps = {
   // TODO: IMPLEMENT FUNCTIONALITY TO MAKE data.ts ADJUSTABLE FROM THE HEADLESS CMS
@@ -81,13 +86,14 @@ export default function Resume({}: ResumeProps): JSX.Element {
   );
 }
 
+// TODO: IMPLEMENT FUNCTIONALITY TO MAKE resumeData.ts ADJUSTABLE FROM THE HEADLESS CMS
 // export async function getStaticProps(): Promise<
-//   GetStaticPropsResult<GalleryProps>
+//   GetStaticPropsResult<ResumeProps>
 // > {
-//   const photos = (await getPhotos()) || [];
+//   const photos = (await getResumeData()) || [];
 
 //   return {
-//     props: { photos },
+//     props: { resumeData },
 //     revalidate: 10,
 //   };
 // }
