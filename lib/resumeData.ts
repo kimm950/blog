@@ -76,6 +76,8 @@ export const skillSet: SkillSet[] = [
       'Reactjs',
       'Nextjs',
       'Solidjs',
+      'Redux',
+      'Axios',
       'MUI',
       'Micro Frontend',
       'Sentry',
