@@ -4,6 +4,7 @@ import {
   skillSet,
   educations,
   languages,
+  contacts,
 } from 'lib/resumeData';
 
 type ResumeProps = {
@@ -13,10 +14,20 @@ type ResumeProps = {
 export default function Resume({}: ResumeProps): JSX.Element {
   return (
     <main className="container mx-auto px-10 mb-8">
-      <header className="">
+      <header className="flex items-center justify-between">
         <h1 className="font-bold text-4xl text-white p-2 bg-red-600 w-fit">
           Hyun Sung Kim
         </h1>
+        <section>
+          <ul>
+            {contacts.map((contact) => {
+              const { phoneNumber, email, github } = contact;
+              return (
+                <li className="text-right">{phoneNumber || email || github}</li>
+              );
+            })}
+          </ul>
+        </section>
       </header>
 
       <section className="education mb-5 mt-10">

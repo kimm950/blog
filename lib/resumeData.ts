@@ -15,6 +15,15 @@ type WorkExperience = {
   details: Detail[];
 };
 
+type Contact = {
+  [key: string]: string;
+};
+
+export const contacts: Contact[] = [
+  { phoneNumber: '080-8885-9406' },
+  { github: 'github.com/kimm950' },
+  { email: 'kimuo950@gmail.com' },
+];
 export const educations: School[] = [
   {
     name: 'The City College of New York, CUNY, New York, NY',
@@ -35,7 +44,7 @@ export const workExperiences: WorkExperience[] = [
       {
         time: '10. 2021 – Present',
         position: 'Lead Frontend Engineer',
-        description: `One of the leaders of Zeals's Frontend chapter. Lead a team of four. Experienced in both scrum, and kanban workflow. Supporting Project Owners and Scrum Masters regarding project releases and schedules. Managing resources and team-growth`,
+        description: `One of the leaders of Zeals's Frontend chapter. Lead a team of four. Experienced in both scrum, and kanban workflow. Supporting Project Owners and Scrum Masters regarding project releases and schedules. Managing resources and team-growth. Implementing a large and complex frontend web application`,
       },
       {
         time: '5. 2019 – 10. 2021',
@@ -78,8 +87,8 @@ export const skillSet: SkillSet[] = [
       'Solidjs',
       'Redux',
       'Axios',
-      'MUI',
-      'Micro Frontend',
+      'Nx(Micro Frontend)',
+      'AmChart',
       'Sentry',
     ],
   },
@@ -91,11 +100,12 @@ export const skillSet: SkillSet[] = [
       'Hotjar',
       'Tailwind CSS',
       'Styled Component',
+      'MUI',
     ],
   },
   {
     category: 'API',
-    techStacks: ['Nodejs', 'Firebase', 'gRPC', 'REST API'],
+    techStacks: ['Nodejs', 'Firebase', 'gRPC', 'protobuf', 'REST API'],
   },
   {
     category: 'Testing',
@@ -108,7 +118,7 @@ export const skillSet: SkillSet[] = [
   },
   {
     category: 'Management',
-    techStacks: ['Jira / Confluence', 'Technical interview', 'Evaluation'],
+    techStacks: ['Jira / Confluence', 'Technical interview', 'Evaluation', 'Documentation'],
   },
 ];
 
